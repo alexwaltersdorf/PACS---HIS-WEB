@@ -17,3 +17,5 @@ jobs:
         run: python -m pip install -r requirements-dev.txt
       - name: Validate planner contracts and references
         run: python scripts/validate_planner.py
+      - name: Test council message exchange
+        run: python -m unittest discover -s tests

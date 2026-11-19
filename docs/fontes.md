@@ -48,6 +48,8 @@ Consulta: 18/11/2026. Fontes oficiais e estudos/padrões são citados junto às 
 
 ## Limites
 
+Configuração do conselho: [Codex AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md), [Claude Code e memória](https://code.claude.com/docs/en/memory), [Gemini CLI GEMINI.md](https://geminicli.com/docs/cli/gemini-md/), consultados em 18/11/2026. Suportam as entradas de contexto documentadas, não uma conexão automática entre fornecedores. A primeira rodada e sua origem estão em [estado da colaboração](../collaboration/estado.md).
+
 - nReport: página pública sem conteúdo legível; funcionalidades autenticadas não inspecionadas.
 - Eden: referência funcional anterior; arquitetura proprietária não presumida.
 - Data de acesso não é data de publicação. URLs current/latest podem mudar.

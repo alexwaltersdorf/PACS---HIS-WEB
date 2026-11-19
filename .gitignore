@@ -22,3 +22,6 @@ secrets/
 artifacts-private/
 runs/*/*/*
 !runs/README.md
+CLAUDE.local.md
+.claude/settings.local.json
+.gemini/settings.json

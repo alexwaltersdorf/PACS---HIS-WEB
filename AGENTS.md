@@ -2,6 +2,10 @@
 
 Leia `PLANNER.md`, `docs/contexto-projeto.md` e o documento do domínio antes de atuar. Este repositório contém planejamento; não declare aplicação, controles, agentes embarcados ou eficácia clínica implementados sem evidência.
 
+## Conselho entre Codex, Claude Code e Gemini
+
+Leia `CONSELHO-LLMS.md` e `collaboration/README.md` antes de planejar mudanças relevantes. O usuário determinou colaboração entre as três ferramentas, com leitura e atualização deste repositório, crítica independente e discussão por mensagens versionadas. Codex deve consultar mensagens destinadas a `codex`, responder às outras ferramentas e preservar autoria, commit-base e divergências. Nunca simule respostas ou consenso ausentes. A coordenação entre sessões/provedores é diferente de um subagente iniciar outros subagentes.
+
 ## Papéis e orquestração
 
 | Agente | Responsabilidade | Modelo do perfil |

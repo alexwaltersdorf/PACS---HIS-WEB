@@ -2,7 +2,7 @@
 
 [Backlog importável](../planning/backlog.csv) · [Quadro](../planning/board.md)
 
-36 itens planejados, organizados por marcos. Responsáveis do CSV são funções do squad, não pessoas já designadas. Os responsáveis clínicos e institucionais ainda serão nomeados.
+38 itens planejados, organizados por marcos. Responsáveis do CSV são funções do squad, não pessoas já designadas. Os responsáveis clínicos e institucionais ainda serão nomeados.
 
 | Marco | Itens principais | Dependência e saída |
 |---|---|---|
@@ -14,6 +14,7 @@
 | M5 | P24–P29 | Uma tarefa de IA avaliada e rascunho assistivo |
 | M6 | P13, P30–P32, P36 | Expansão seletiva; depende da maturidade dos componentes |
 | M7 | P33–P35 | Avaliação, piloto e autorização para a finalidade pretendida |
+| M1 / M6 | P38 / P37 | Validação de problema/segmento e futura automação do conselho de três ferramentas |
 
 M6 e M7 não são uma fila rígida: expansões clínicas de P36 dependem do piloto P35; pesquisa/engenharia podem evoluir antes, em sandbox. A coluna dependencies do CSV é a fonte de precedência por item.
 

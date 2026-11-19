@@ -10,6 +10,7 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 from jsonschema import Draft202012Validator, FormatChecker
+from council import load_messages
 
 ROOT = Path(__file__).resolve().parents[1]
 errors: list[str] = []
@@ -65,6 +66,16 @@ def main() -> int:
     require(not policy["runtime_enabled"] and not policy["clinical_use_enabled"], "Policy must remain design-only")
     require(policy["defaults"]["deny_agent_report_signature"], "Missing signature restriction")
     require(policy["defaults"]["deny_self_promotion"], "Missing self-promotion restriction")
+
+    council = load("config/llm-council.json")
+    participants = council["participants"]
+    require({item["id"] for item in participants} == {"codex", "claude-code", "gemini"}, "Missing council participant")
+    require(len(participants) == 3, "Council participant IDs must be unique")
+    require(council["automatic_dispatch_enabled"] is False, "Automatic dispatch not implemented")
+    for item in participants:
+        require((ROOT / item["entrypoint"]).is_file(), f"Missing entrypoint: {item['id']}")
+    require((ROOT / council["canonical_document"]).is_file(), "Missing shared council document")
+    load_messages(ROOT)
 
     validators = {}
     for path in ROOT.glob("schemas/*.schema.json"):

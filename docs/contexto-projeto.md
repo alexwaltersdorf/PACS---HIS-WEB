@@ -2,6 +2,8 @@
 
 Última revisão: 18/11/2026.
 
+Nova diretriz: Codex, Claude Code e Google Gemini colaborarão na construção da empresa e da plataforma, com leitura/atualização do GitHub e discussão explícita de alternativas. Consultar `CONSELHO-LLMS.md`; não substituir três provedores por três personas de um mesmo modelo. O protocolo compartilhado distingue participantes previstos, consultas reais e automação ainda não implementada.
+
 ## Confirmado pelo usuário
 
 Plataforma web com viewer DICOM, PACS e RIS integrado; worklist; padrões de saúde brasileiros/internacionais; laudos estruturados para US/CT/MR/MG/RX; assistência radiológica por subespecialidade; pesquisa de artigos; discussão multidisciplinar; integração de exames laboratoriais, cardiológicos, EEG, espirometria e outros; engenharia e segurança com atualização contínua. Destino do planner: este repositório GitHub.

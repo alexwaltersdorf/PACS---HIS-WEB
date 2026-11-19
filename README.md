@@ -1,10 +1,14 @@
 # PACS · RIS · HIS Web — planner de arquitetura e squads de IA
 
-**Versão do planner:** 0.2 · **Revisão:** 18/11/2026 · **Estado:** especificação, contratos e backlog. Não há aplicação clínica implantada neste repositório.
+**Versão do planner:** 0.3 · **Revisão:** 18/11/2026 · **Estado:** especificação, contratos e backlog. Não há aplicação clínica implantada neste repositório.
 
 Plataforma web integrada para gestão da jornada diagnóstica, armazenamento e visualização de imagens, laudos estruturados e assistência por IA. O RIS organiza o trabalho; o PACS preserva os objetos; o viewer apresenta imagens e evidências; a camada de interoperabilidade reúne contexto clínico; os agentes produzem propostas e rascunhos verificáveis.
 
 ## Começar pelo planner
+
+**Construção colaborativa:** [Codex + Claude Code + Gemini](CONSELHO-LLMS.md), com [canal de discussão versionado](collaboration/README.md). Cada ferramenta lê as mesmas decisões, propõe alternativas e revisa as outras; integração automática contínua ainda depende dos adaptadores.
+
+[Participações efetivas e pendências](collaboration/estado.md) — não presumir consenso ou conexão pela presença dos arquivos.
 
 | Documento | O que contém |
 |---|---|

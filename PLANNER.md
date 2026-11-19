@@ -4,6 +4,8 @@
 
 Criar uma plataforma PACS/RIS web integrada ao visualizador DICOM, com contexto clínico interoperável, laudos estruturados e agentes especializados. Evoluir para integração com funções HIS sem presumir que o primeiro MVP seja um prontuário hospitalar completo.
 
+Construção compartilhada por **ChatGPT/Codex, Claude Code e Google Gemini**, conforme o [protocolo do conselho](CONSELHO-LLMS.md). As três ferramentas devem ler e atualizar a base no GitHub, discutir propostas e registrar decisões/evidências. A ambição de construir uma startup de grande escala orienta a descoberta de produto e a disciplina de execução; não constitui previsão de valuation.
+
 ## Mapa do produto
 
 ```mermaid

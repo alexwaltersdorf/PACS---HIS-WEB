@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mensagem pública de colaboração entre ferramentas",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "topic",
+    "author",
+    "recipients",
+    "kind",
+    "created_at",
+    "base_commit",
+    "in_reply_to",
+    "body",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{0,95}$"
+    },
+    "topic": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{0,79}$"
+    },
+    "author": {
+      "enum": [
+        "codex",
+        "claude-code",
+        "gemini"
+      ]
+    },
+    "recipients": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "codex",
+          "claude-code",
+          "gemini"
+        ]
+      }
+    },
+    "kind": {
+      "enum": [
+        "proposal",
+        "review",
+        "response",
+        "synthesis",
+        "status",
+        "decision_proposal"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "base_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "in_reply_to": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]{0,95}$"
+      }
+    },
+    "body": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30000
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "recorded_by",
+        "surface",
+        "model_label",
+        "body_sha256"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "direct_session",
+            "relayed_output"
+          ]
+        },
+        "recorded_by": {
+          "enum": [
+            "codex",
+            "claude-code",
+            "gemini",
+            "human"
+          ]
+        },
+        "surface": {
+          "enum": [
+            "codex_session",
+            "claude_code_cli",
+            "gemini_cli",
+            "gemini_web",
+            "manual"
+          ]
+        },
+        "model_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "body_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

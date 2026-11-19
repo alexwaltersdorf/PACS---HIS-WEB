@@ -14,6 +14,8 @@
 | ADR-010 | Modelos, prompts, templates e corpus com avaliação | Cada mudança pode alterar resultado, mesmo sem modificar código |
 | ADR-011 | Segurança por controles testados e risco residual | Não declarar blindagem total, conformidade automática ou certificação inexistente |
 | ADR-012 | Perfis portáveis e política declarativa neste commit | Planner sustentável; runtime será implementado em incrementos verificáveis |
+| ADR-013 | Conselho de Codex, Claude Code e Gemini | Governança solicitada pelo fundador; mensagens, crítica cruzada e decisões compartilhadas, sem simular participantes |
+| ADR-014 | Git como meio assíncrono inicial | Protocolo e utilitário local disponíveis; despacho autônomo contínuo depende de adaptadores, permissões e orçamento |
 
 ## Decisões necessárias antes da implementação clínica
 

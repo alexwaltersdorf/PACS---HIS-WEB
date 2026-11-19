@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "enabled_for_async_repository_collaboration": true,
+  "automatic_dispatch_enabled": false,
+  "canonical_document": "CONSELHO-LLMS.md",
+  "message_schema": "schemas/llm-message.schema.json",
+  "message_directory": "collaboration/messages",
+  "participants": [
+    {
+      "id": "codex",
+      "provider": "OpenAI",
+      "tool": "ChatGPT / Codex",
+      "entrypoint": "AGENTS.md"
+    },
+    {
+      "id": "claude-code",
+      "provider": "Anthropic",
+      "tool": "Claude Code",
+      "entrypoint": "CLAUDE.md"
+    },
+    {
+      "id": "gemini",
+      "provider": "Google",
+      "tool": "Gemini / Gemini CLI",
+      "entrypoint": "GEMINI.md"
+    }
+  ],
+  "required_reviewers_for_major_proposal": [
+    "codex",
+    "claude-code",
+    "gemini"
+  ],
+  "max_debate_rounds": 2,
+  "silent_participant_means": "pending_not_agreed",
+  "decision_rule": "evidence_and_tests_with_human_resolution_for_material_impasse",
+  "automatic_clinical_approval": false,
+  "automatic_production_deploy": false,
+  "credentials_in_repository": false,
+  "authorship_note": "JSON author fields are declarations, not cryptographic provider authentication."
+}

@@ -35,3 +35,5 @@
 "P34","Conformidade","Matriz SBIS/CFM/NGS2 e Anvisa","P0","M7","seguranca-privacidade","P01;P16;P28","planned","Categoria/finalidade definidas e evidências; sem declarar certificado antes de obtê-lo."
 "P35","Operação","Piloto e autorização de uso","P0","M7","qualidade-clinica","P28;P29;P33;P34","planned","Uso compatível com finalidade, treinamento e responsáveis; monitoramento e rollback."
 "P36","Expansão","Novas modalidades e conectores","P2","M6","interoperabilidade-saude","P17;P35","planned","Contrato e validação próprios; nenhuma promessa universal de suporte."
+"P37","Conselho LLM","Adaptadores autenticados Codex Claude Code Gemini","P1","M6","engenharia-plataforma","P24;P32","planned","Chamadas reais com orçamento, fila, identidade/proveniência, limites de rodadas, timeout e falha sem consenso fictício."
+"P38","Produto","Validar problema segmento e piloto","P0","M1","engenharia-plataforma","","planned","Entrevistas e protótipo com hipóteses e métricas definidas; evidência de necessidade e compromisso sem presumir receita ou valuation."

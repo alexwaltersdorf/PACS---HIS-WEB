@@ -4,6 +4,8 @@
 
 O catálogo contém oito funções e perfis de subespecialidade. Cada execução recebe objetivo, escopo, ferramentas, limite de custo/tempo e contrato de saída. A coordenação é código/workflow; não depende de um agente genérico com autoridade para delegar indefinidamente.
 
+Acima desses papéis existe o [conselho de construção Codex/Claude Code/Gemini](../CONSELHO-LLMS.md). São três ferramentas/provedores de colaboração de engenharia; não três novos médicos nem substituição das oito funções. O protocolo permite crítica cruzada e atualização da documentação compartilhada.
+
 ```mermaid
 flowchart LR
   C[Contexto autorizado] --> T[triagem-contexto]
