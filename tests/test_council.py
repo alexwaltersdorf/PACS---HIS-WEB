@@ -5,6 +5,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from council import validate_message, validator
+from jsonschema.exceptions import ValidationError
 
 
 class MessageContractTests(unittest.TestCase):
@@ -54,6 +55,20 @@ class MessageContractTests(unittest.TestCase):
     def test_wrong_surface_rejected(self):
         self.message['provenance']['surface'] = 'claude_code_cli'
         with self.assertRaises(ValueError):
+            validate_message(self.message, {}, self.check)
+
+    def test_desktop_surface_supported_in_version_020(self):
+        self.message['schema_version'] = '0.2.0'
+        self.message['author'] = 'claude-code'
+        self.message['provenance']['recorded_by'] = 'claude-code'
+        self.message['provenance']['surface'] = 'claude_code_desktop'
+        validate_message(self.message, {}, self.check)
+
+    def test_desktop_surface_not_backported_to_version_010(self):
+        self.message['author'] = 'claude-code'
+        self.message['provenance']['recorded_by'] = 'claude-code'
+        self.message['provenance']['surface'] = 'claude_code_desktop'
+        with self.assertRaises(ValidationError):
             validate_message(self.message, {}, self.check)
 
 

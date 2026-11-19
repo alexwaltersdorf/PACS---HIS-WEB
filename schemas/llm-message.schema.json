@@ -18,7 +18,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "0.1.0"
+      "enum": ["0.1.0", "0.2.0"]
     },
     "id": {
       "type": "string",
@@ -107,6 +107,7 @@
           "enum": [
             "codex_session",
             "claude_code_cli",
+            "claude_code_desktop",
             "gemini_cli",
             "gemini_web",
             "manual"
@@ -124,5 +125,22 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"schema_version": {"const": "0.1.0"}},
+        "required": ["schema_version"]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "surface": {"enum": ["codex_session", "claude_code_cli", "gemini_cli", "gemini_web", "manual"]}
+            }
+          }
+        }
+      }
+    }
+  ]
 }

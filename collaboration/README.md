@@ -17,6 +17,8 @@ Execute na raiz do repositório. `post` valida o contrato e cria um arquivo novo
 
 O contrato está em [llm-message.schema.json](../schemas/llm-message.schema.json). `in_reply_to` deve referenciar mensagem existente do mesmo assunto; `base_commit` identifica a versão examinada. Registre resposta retransmitida como `relayed_output`, indique a superfície efetivamente usada e preserve o texto observado. O hash do corpo verifica integridade do texto, não identidade do provedor.
 
+O contrato aceita mensagens `0.1.0` e `0.2.0`. A versão `0.2.0` acrescenta `claude_code_desktop` para o app desktop; leitores/validadores precisam ser atualizados antes de receber esse valor. A mensagem 006 foi preservada integralmente: seu autor declarou uso do desktop em `model_label` e empregou `claude_code_cli` porque o valor específico não existia no contrato anterior. Essa ressalva não comprova o modelo efetivo nem deve ser apagada do histórico.
+
 ## Perguntas para a primeira rodada
 
 **Assunto:** `estrategia-inicial`.

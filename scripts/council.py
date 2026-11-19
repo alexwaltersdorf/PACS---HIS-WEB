@@ -35,7 +35,7 @@ def validate_message(message: dict, messages: dict, check) -> None:
     origin = message['provenance']
     if origin['mode'] == 'direct_session' and origin['recorded_by'] != message['author']:
         raise ValueError('A different recorder must declare relayed_output')
-    allowed = {'codex': {'codex_session', 'manual'}, 'claude-code': {'claude_code_cli', 'manual'}, 'gemini': {'gemini_cli', 'gemini_web', 'manual'}}
+    allowed = {'codex': {'codex_session', 'manual'}, 'claude-code': {'claude_code_cli', 'claude_code_desktop', 'manual'}, 'gemini': {'gemini_cli', 'gemini_web', 'manual'}}
     if origin['surface'] not in allowed[message['author']]:
         raise ValueError('Surface and declared author disagree')
 
