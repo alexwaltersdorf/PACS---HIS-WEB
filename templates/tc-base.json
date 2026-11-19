@@ -1,0 +1,66 @@
+{
+  "template_id": "tc-base",
+  "version": "0.1.0",
+  "modality": "CT",
+  "status": "draft",
+  "synthetic": true,
+  "clinical_use_enabled": false,
+  "clinical_owner": null,
+  "source_policy": "Estrutura original do projeto; sem texto proprietário, códigos inventados ou valores de referência clínicos.",
+  "required_sections": [
+    "indication",
+    "technique",
+    "comparison",
+    "findings",
+    "impression",
+    "limitations"
+  ],
+  "fields": [
+    {
+      "id": "tc-base-field-1",
+      "label": "Região examinada",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "tc-base-field-2",
+      "label": "Protocolo",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "tc-base-field-3",
+      "label": "Contraste e fases",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "tc-base-field-4",
+      "label": "Reconstruções",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "tc-base-field-5",
+      "label": "Medidas e calibração",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    }
+  ],
+  "rules": [
+    "Não preencher normalidade por padrão.",
+    "Preservar lateralidade, unidade, método e origem de medidas.",
+    "Exigir revisão clínica antes de qualquer ativação.",
+    "Documento assinado é separado da definição e da instância."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "task_id": "contract-test",
+  "agent_id": "radiologia-especializada",
+  "objective": "Exercitar abstenção quando faltam dados.",
+  "mode": "synthetic",
+  "data_classification": "synthetic",
+  "artifact_refs": [
+    "examples/case-synthetic.json"
+  ],
+  "context_ref": "examples/case-synthetic.json",
+  "profile_id": "torax"
+}

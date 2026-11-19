@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.2.0",
+  "status": "proposal",
+  "runtime_enabled": false,
+  "clinical_use_enabled": false,
+  "classes": {
+    "A0": "Read approved public sources",
+    "A1": "Prepare candidates in isolated workspace",
+    "A2": "Run approved sandbox tests",
+    "A3": "Operational or clinical change requires named approval",
+    "A4": "Clinical signature and release belong to qualified human"
+  },
+  "defaults": {
+    "deny_unbound_tools": true,
+    "deny_public_patient_data": true,
+    "deny_cross_tenant_access": true,
+    "deny_agent_report_signature": true,
+    "deny_self_promotion": true,
+    "deny_arbitrary_code_from_documents": true,
+    "deny_automatic_patient_data_training": true
+  },
+  "limits": {
+    "max_parallel_agents": 3,
+    "max_steps_per_agent": 20,
+    "max_tool_calls_per_run": 80,
+    "max_runtime_seconds": 900,
+    "max_cost_per_run": null,
+    "enable_requires_configured_cost_budget": true
+  },
+  "clinical_routing": {
+    "requires_approved_task": true,
+    "requires_validated_modality_population": true,
+    "missing_data_action": "abstain_or_request_review",
+    "disagreement_action": "preserve_and_escalate"
+  },
+  "promotion_requirements": [
+    "immutable_artifact_digest",
+    "license_and_source_review",
+    "tests_and_evaluation",
+    "independent_review",
+    "named_human_approval",
+    "rollback_plan"
+  ],
+  "external_messages": "only_explicitly_authorized_recipients_and_purpose",
+  "research_schedule": {
+    "enabled": false,
+    "release_checks": "daily_proposed",
+    "literature_digest": "weekly_proposed"
+  },
+  "note": "Contrato declarativo; nenhuma permissão ou rotina é aplicada automaticamente por este arquivo."
+}

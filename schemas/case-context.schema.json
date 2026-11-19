@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/pacs-his/schemas/case-context.schema.json",
+  "title": "CaseContext interno, não recurso FHIR",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "case_id",
+    "synthetic",
+    "clinical_question",
+    "context_as_of",
+    "modality",
+    "data_items",
+    "missing_data",
+    "identity_verified"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.0"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "clinical_question": {
+      "type": "string"
+    },
+    "context_as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modality": {
+      "enum": [
+        "CT",
+        "MR",
+        "MG",
+        "CR",
+        "DX",
+        "US",
+        "OT"
+      ]
+    },
+    "identity_verified": {
+      "type": "boolean"
+    },
+    "data_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "state",
+          "value",
+          "source_ref",
+          "event_time",
+          "ingested_time"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "known",
+              "unknown",
+              "not_asked",
+              "unavailable",
+              "conflicting"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "event_time": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "ingested_time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "missing_data": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

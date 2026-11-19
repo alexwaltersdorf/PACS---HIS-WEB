@@ -1,0 +1,148 @@
+{
+  "schema_version": "0.2.0",
+  "runtime_enabled": false,
+  "orchestrator": "workflow_owned_by_application_or_primary_session",
+  "agents": [
+    {
+      "id": "triagem-contexto",
+      "profile_file": ".Codex/agents/triagem-contexto.md",
+      "role": "Contexto e triagem assistiva",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "context.read",
+        "context.draft"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false,
+      "clinical_context_schema": "schemas/case-context.schema.json"
+    },
+    {
+      "id": "radiologia-especializada",
+      "profile_file": ".Codex/agents/radiologia-especializada.md",
+      "role": "Análise radiológica assistiva por perfil",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "context.read",
+        "evidence.read",
+        "inference.approved_result.read",
+        "report.draft"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false,
+      "clinical_context_schema": "schemas/case-context.schema.json"
+    },
+    {
+      "id": "discussao-multidisciplinar",
+      "profile_file": ".Codex/agents/discussao-multidisciplinar.md",
+      "role": "Parecer assistivo multidisciplinar",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "context.scoped_read",
+        "evidence.read",
+        "opinion.draft"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false,
+      "clinical_context_schema": "schemas/case-context.schema.json"
+    },
+    {
+      "id": "pesquisa-cientifica",
+      "profile_file": ".Codex/agents/pesquisa-cientifica.md",
+      "role": "Pesquisa e crítica de evidências",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "public_sources.search",
+        "public_sources.read",
+        "knowledge.candidate.write"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false
+    },
+    {
+      "id": "interoperabilidade-saude",
+      "profile_file": ".Codex/agents/interoperabilidade-saude.md",
+      "role": "Contratos e integração em saúde",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "contracts.read",
+        "mappings.propose",
+        "sandbox.validation.run"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false
+    },
+    {
+      "id": "engenharia-plataforma",
+      "profile_file": ".Codex/agents/engenharia-plataforma.md",
+      "role": "Engenharia e atualização da plataforma",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "repository.read",
+        "repository.patch",
+        "sandbox.tests.run",
+        "release.propose"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false
+    },
+    {
+      "id": "seguranca-privacidade",
+      "profile_file": ".Codex/agents/seguranca-privacidade.md",
+      "role": "Segurança e privacidade por evidências",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "architecture.read",
+        "security.review",
+        "sandbox.security_tests.run"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false
+    },
+    {
+      "id": "qualidade-clinica",
+      "profile_file": ".Codex/agents/qualidade-clinica.md",
+      "role": "Revisão independente de qualidade clínica",
+      "enabled": false,
+      "model_policy": "inherit_for_documentary_work; validated_model_required_for_clinical_task",
+      "tool_bindings": [],
+      "proposed_capabilities": [
+        "draft.read",
+        "evidence.read",
+        "quality.review"
+      ],
+      "input_schema": "schemas/task-request.schema.json",
+      "output_schema": "schemas/agent-result.schema.json",
+      "can_sign_report": false,
+      "can_deploy_production": false,
+      "clinical_context_schema": "schemas/case-context.schema.json"
+    }
+  ]
+}

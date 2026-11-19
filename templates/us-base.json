@@ -1,0 +1,58 @@
+{
+  "template_id": "us-base",
+  "version": "0.1.0",
+  "modality": "US",
+  "status": "draft",
+  "synthetic": true,
+  "clinical_use_enabled": false,
+  "clinical_owner": null,
+  "source_policy": "Estrutura original do projeto; sem texto proprietário, códigos inventados ou valores de referência clínicos.",
+  "required_sections": [
+    "indication",
+    "technique",
+    "comparison",
+    "findings",
+    "impression",
+    "limitations"
+  ],
+  "fields": [
+    {
+      "id": "us-base-field-1",
+      "label": "Região examinada",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "us-base-field-2",
+      "label": "Técnica e limitações",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "us-base-field-3",
+      "label": "Medidas",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "us-base-field-4",
+      "label": "Doppler quando aplicável",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    }
+  ],
+  "rules": [
+    "Não preencher normalidade por padrão.",
+    "Preservar lateralidade, unidade, método e origem de medidas.",
+    "Exigir revisão clínica antes de qualquer ativação.",
+    "Documento assinado é separado da definição e da instância."
+  ]
+}

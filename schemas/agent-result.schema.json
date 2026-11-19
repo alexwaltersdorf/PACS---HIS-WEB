@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/pacs-his/schemas/agent-result.schema.json",
+  "title": "Resultado assistivo interno",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "agent_id",
+    "task_id",
+    "synthetic",
+    "status",
+    "findings",
+    "limitations",
+    "disagreements",
+    "human_review_required",
+    "signed_by"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.0"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "completed_draft",
+        "needs_information",
+        "abstained",
+        "failed"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "statement",
+          "evidence_refs",
+          "assessment_state"
+        ],
+        "properties": {
+          "statement": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "assessment_state": {
+            "enum": [
+              "present",
+              "absent_assessed",
+              "not_assessed",
+              "indeterminate",
+              "not_applicable"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "assessment_state": {
+                  "enum": [
+                    "present",
+                    "absent_assessed"
+                  ]
+                }
+              },
+              "required": [
+                "assessment_state"
+              ]
+            },
+            "then": {
+              "properties": {
+                "statement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence_refs": {
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disagreements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_review_required": {
+      "const": true
+    },
+    "signed_by": {
+      "const": null
+    }
+  }
+}

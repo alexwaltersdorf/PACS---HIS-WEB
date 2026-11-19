@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.2.0",
+  "profiles": [
+    {
+      "id": "neurorradiologia",
+      "agent_id": "radiologia-especializada",
+      "scope": "Encéfalo, coluna e sistema nervoso",
+      "required_context_description": "Sequências, história neurológica e comparações",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "musculoesqueletico",
+      "agent_id": "radiologia-especializada",
+      "scope": "Ossos, articulações e partes moles",
+      "required_context_description": "Trauma, lateralidade, cirurgia e implantes",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "abdome-pelve",
+      "agent_id": "radiologia-especializada",
+      "scope": "Abdome e pelve",
+      "required_context_description": "Fases de contraste, cirurgia e laboratório pertinente",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "torax",
+      "agent_id": "radiologia-especializada",
+      "scope": "Pulmões, pleura e mediastino",
+      "required_context_description": "Técnica, história respiratória e provas funcionais",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "mama",
+      "agent_id": "radiologia-especializada",
+      "scope": "Imagem mamária",
+      "required_context_description": "Modalidade, lateralidade, incidências, antecedentes e comparação",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "cardiovascular",
+      "agent_id": "radiologia-especializada",
+      "scope": "Imagem cardiovascular",
+      "required_context_description": "Sincronização, fase e dados ECG/eco relevantes",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "cabeca-pescoco",
+      "agent_id": "radiologia-especializada",
+      "scope": "Cabeça e pescoço",
+      "required_context_description": "Indicação, anatomia e correlação otorrinolaringológica",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "pediatria",
+      "agent_id": "radiologia-especializada",
+      "scope": "Radiologia pediátrica",
+      "required_context_description": "Faixa etária e validação específica",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "oncologia-imagem",
+      "agent_id": "radiologia-especializada",
+      "scope": "Imagem oncológica",
+      "required_context_description": "Tratamento e comparação longitudinal com critérios aprovados",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "emergencia",
+      "agent_id": "radiologia-especializada",
+      "scope": "Imagem em urgência",
+      "required_context_description": "Contexto, protocolo e confirmação de alertas",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "intervencionista",
+      "agent_id": "radiologia-especializada",
+      "scope": "Apoio documental intervencionista",
+      "required_context_description": "Procedimento e contexto; sem comando de dispositivos",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "cirurgia",
+      "agent_id": "discussao-multidisciplinar",
+      "scope": "Correlação cirúrgica",
+      "required_context_description": "Pergunta cirúrgica delimitada",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "ortopedia",
+      "agent_id": "discussao-multidisciplinar",
+      "scope": "Correlação ortopédica",
+      "required_context_description": "Trauma e função",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "neurologia",
+      "agent_id": "discussao-multidisciplinar",
+      "scope": "Correlação neurológica",
+      "required_context_description": "História, exame e EEG quando pertinente",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "pneumologia",
+      "agent_id": "discussao-multidisciplinar",
+      "scope": "Correlação respiratória",
+      "required_context_description": "História, função pulmonar e exposição relevante",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "oncologia",
+      "agent_id": "discussao-multidisciplinar",
+      "scope": "Correlação oncológica",
+      "required_context_description": "Histologia, tratamento e cronologia",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "otorrinolaringologia",
+      "agent_id": "discussao-multidisciplinar",
+      "scope": "Correlação otorrinolaringológica",
+      "required_context_description": "Sintomas e exames pertinentes",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    },
+    {
+      "id": "vascular",
+      "agent_id": "discussao-multidisciplinar",
+      "scope": "Correlação vascular",
+      "required_context_description": "História, Doppler e intervenções",
+      "clinical_use_enabled": false,
+      "approved_model_digest": null,
+      "clinical_owner": null,
+      "validated_population": null
+    }
+  ]
+}

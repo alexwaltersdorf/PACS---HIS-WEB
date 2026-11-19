@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.2.0",
+  "agent_id": "radiologia-especializada",
+  "task_id": "contract-test",
+  "synthetic": true,
+  "status": "abstained",
+  "findings": [],
+  "limitations": [
+    "Não foram fornecidas imagens ou técnica; não houve análise de pixels."
+  ],
+  "disagreements": [],
+  "human_review_required": true,
+  "signed_by": null
+}

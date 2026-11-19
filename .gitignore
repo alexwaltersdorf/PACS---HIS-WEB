@@ -1,0 +1,24 @@
+# Segredos, dados operacionais e artefatos locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.edf
+*.bdf
+*.db
+*.sqlite*
+__pycache__/
+.venv/
+node_modules/
+data/
+secrets/
+artifacts-private/
+runs/*/*/*
+!runs/README.md

@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2.0",
+  "case_id": "synthetic-contract-001",
+  "synthetic": true,
+  "clinical_question": "Verificar manejo de contexto ausente; não interpretar exame.",
+  "context_as_of": "2026-11-18T12:00:00Z",
+  "modality": "DX",
+  "identity_verified": true,
+  "data_items": [
+    {
+      "id": "item-1",
+      "kind": "technique",
+      "state": "unavailable",
+      "value": null,
+      "unit": null,
+      "source_ref": "synthetic:fixture",
+      "event_time": null,
+      "ingested_time": "2026-11-18T12:00:00Z"
+    }
+  ],
+  "missing_data": [
+    "Imagens não fornecidas",
+    "Técnica não fornecida"
+  ]
+}

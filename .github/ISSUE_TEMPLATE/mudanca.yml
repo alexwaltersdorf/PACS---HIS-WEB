@@ -1,0 +1,23 @@
+name: Mudança de plataforma
+description: Propor requisito ou melhoria com evidência e aceitação.
+title: "[Requisito] "
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema e resultado esperado
+      description: Use somente exemplos sintéticos; não inclua dados pessoais ou segredos.
+    validations:
+      required: true
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Fontes, versão e impacto clínico
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de aceitação e reversão
+    validations:
+      required: true

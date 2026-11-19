@@ -1,0 +1,66 @@
+{
+  "template_id": "mg-base",
+  "version": "0.1.0",
+  "modality": "MG",
+  "status": "draft",
+  "synthetic": true,
+  "clinical_use_enabled": false,
+  "clinical_owner": null,
+  "source_policy": "Estrutura original do projeto; sem texto proprietário, códigos inventados ou valores de referência clínicos.",
+  "required_sections": [
+    "indication",
+    "technique",
+    "comparison",
+    "findings",
+    "impression",
+    "limitations"
+  ],
+  "fields": [
+    {
+      "id": "mg-base-field-1",
+      "label": "Lateralidade",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "mg-base-field-2",
+      "label": "Incidências e técnica",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "mg-base-field-3",
+      "label": "Comparação",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "mg-base-field-4",
+      "label": "Achados por mama",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    },
+    {
+      "id": "mg-base-field-5",
+      "label": "Classificação conforme protocolo aprovado",
+      "type": "text",
+      "default": null,
+      "assessment_state": "not_assessed",
+      "terminology_binding": null
+    }
+  ],
+  "rules": [
+    "Não preencher normalidade por padrão.",
+    "Preservar lateralidade, unidade, método e origem de medidas.",
+    "Exigir revisão clínica antes de qualquer ativação.",
+    "Documento assinado é separado da definição e da instância."
+  ]
+}

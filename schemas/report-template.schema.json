@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/pacs-his/schemas/report-template.schema.json",
+  "title": "Definição sintética de template, não laudo nem MRRT/FHIR",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "template_id",
+    "version",
+    "modality",
+    "status",
+    "synthetic",
+    "clinical_use_enabled",
+    "clinical_owner",
+    "source_policy",
+    "fields",
+    "required_sections",
+    "rules"
+  ],
+  "properties": {
+    "template_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "modality": {
+      "enum": [
+        "CT",
+        "MR",
+        "MG",
+        "DX",
+        "US"
+      ]
+    },
+    "status": {
+      "const": "draft"
+    },
+    "synthetic": {
+      "const": true
+    },
+    "clinical_use_enabled": {
+      "const": false
+    },
+    "clinical_owner": {
+      "type": "null"
+    },
+    "source_policy": {
+      "type": "string"
+    },
+    "required_sections": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "indication",
+          "technique",
+          "comparison",
+          "findings",
+          "impression",
+          "limitations"
+        ]
+      },
+      "minItems": 6,
+      "uniqueItems": true
+    },
+    "fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "type",
+          "default",
+          "assessment_state",
+          "terminology_binding"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "text",
+              "number",
+              "choice",
+              "measurements",
+              "repeatable"
+            ]
+          },
+          "default": {
+            "type": "null"
+          },
+          "assessment_state": {
+            "const": "not_assessed"
+          },
+          "terminology_binding": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
