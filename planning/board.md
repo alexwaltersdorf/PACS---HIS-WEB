@@ -1,10 +1,11 @@
 # Quadro do planner
 
-Atualização: 18/11/2026. Este quadro é documental; não é um GitHub Project criado pela API.
+Atualização: 22/11/2026. Este quadro é documental; não é um GitHub Project criado pela API.
 
 | Coluna | Itens |
 |---|---|
 | Entregue nesta revisão | Planner, oito perfis de agentes, 18 perfis de especialidade, contratos, cinco bases sintéticas e validação documental |
+| Incremento local executável | P39: importação sintética por API, OHIF, persistência após reinício e tela manual de importação; [evidência e limites](../docs/09-visualizador-local.md) |
 | A definir | Responsáveis, finalidade, tarefa piloto, infraestrutura, integrações e critérios clínicos |
 | Planejado | P01–P38 em [backlog.csv](backlog.csv) |
 | Em implementação | Nenhum item neste commit |

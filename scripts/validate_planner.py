@@ -125,7 +125,11 @@ def main() -> int:
     edges = {key: [dep for dep in item["dependencies"].split(";") if dep] for key, item in tasks.items()}
     for key, item in tasks.items():
         require(item["owner_role"] in ids, f"Unknown backlog owner: {key}")
-        require(item["status"] == "planned", f"Unexpected implementation claim: {key}")
+        require(item["status"] in {"planned", "ready", "in_progress", "in_review", "validated", "done", "blocked"}, f"Unknown task state: {key}")
+        if item["status"] in {"validated", "done"}:
+            evidence = item.get("evidence", "")
+            evidence_path = (ROOT / evidence).resolve()
+            require(bool(evidence) and evidence_path.is_relative_to(ROOT.resolve()) and evidence_path.is_file(), f"Missing implementation evidence: {key}")
         require(all(dep in tasks for dep in edges[key]), f"Missing dependency: {key}")
     visiting, visited = set(), set()
 

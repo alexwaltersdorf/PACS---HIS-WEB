@@ -1,0 +1,64 @@
+name: pacs-his-local
+services:
+  orthanc:
+    image: orthancteam/orthanc:26.11.1@sha256:25738bcd515926ac8d33cacf09729a410a32c0a65d6cb8e61bd86fce81a4cd30
+    restart: unless-stopped
+    command: ["/etc/orthanc/local.json", "/run/secrets/orthanc-users.json"]
+    environment:
+      VERBOSE_STARTUP: "false"
+      VERBOSE_ENABLED: "false"
+      GENERATE_HOST_ID_IF_MISSING: "false"
+    volumes:
+      - type: bind
+        source: ${PACS_LOCAL_ROOT:?Run scripts/start-local-viewer.ps1}/archive
+        target: /var/lib/orthanc/db
+      - ./orthanc.json:/etc/orthanc/local.json:ro
+      - ./healthcheck.py:/opt/local-healthcheck.py:ro
+      - ${PACS_LOCAL_ROOT:?Run scripts/start-local-viewer.ps1}/hostid:/etc/hostid:ro
+    secrets:
+      - orthanc-users.json
+    healthcheck:
+      test: ["CMD", "python3", "/opt/local-healthcheck.py"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: local
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks: [local-only]
+  web:
+    image: nginx:1.30.7-alpine@sha256:caf4e1e032a20f9c3c5e28fc7f25ffd768ad8677b4975c54193075997b3a97e3
+    restart: unless-stopped
+    user: "101:101"
+    entrypoint: [nginx]
+    command: ["-g", "daemon off;"]
+    depends_on:
+      orthanc:
+        condition: service_healthy
+    ports: ["127.0.0.1:8042:8080"]
+    volumes: ["./nginx.conf:/etc/nginx/nginx.conf:ro"]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/local-health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: local
+      options: {max-size: "5m", max-file: "2"}
+    networks: [local-only, entry]
+secrets:
+  orthanc-users.json:
+    file: ${PACS_LOCAL_ROOT:?Run scripts/start-local-viewer.ps1}/secrets/orthanc-users.json
+networks:
+  local-only:
+    internal: true
+  entry: {}

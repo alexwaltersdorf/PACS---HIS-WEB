@@ -1,6 +1,8 @@
 # PACS · RIS · HIS Web — planner de arquitetura e squads de IA
 
-**Versão do planner:** 0.3 · **Revisão:** 18/11/2026 · **Estado:** especificação, contratos e backlog. Não há aplicação clínica implantada neste repositório.
+**Versão do planner:** 0.3 · **Revisão:** 22/11/2026 · **Estado:** planner e primeiro ambiente local de importação DICOM/visualização. Não há aplicação clínica validada ou RIS completo implantado.
+
+**Acesso ao primeiro visualizador:** [inicialização, importação e limites](docs/09-visualizador-local.md). Executar `scripts/start-local-viewer.ps1` com Docker Desktop iniciado; dados e senha ficam fora do Git.
 
 Plataforma web integrada para gestão da jornada diagnóstica, armazenamento e visualização de imagens, laudos estruturados e assistência por IA. O RIS organiza o trabalho; o PACS preserva os objetos; o viewer apresenta imagens e evidências; a camada de interoperabilidade reúne contexto clínico; os agentes produzem propostas e rascunhos verificáveis.
 
@@ -21,6 +23,7 @@ Plataforma web integrada para gestão da jornada diagnóstica, armazenamento e v
 | [Roadmap e backlog](docs/06-roadmap.md) | Etapas, dependências e critérios de conclusão |
 | [Decisões de arquitetura](docs/07-decisoes.md) | Escolhas adotadas, alternativas e questões abertas |
 | [Infraestrutura inicial](docs/08-infraestrutura-inicial.md) | Desenvolvimento local, VPS de homologação e primeiro incremento proposto |
+| [Visualizador local executável](docs/09-visualizador-local.md) | Instalação, importação, versões e testes efetivamente executados |
 | [Contexto compartilhado](docs/contexto-projeto.md) | Premissas confirmadas e informações ainda necessárias |
 | [Fontes](docs/fontes.md) | Referências oficiais e limites da pesquisa |
 
@@ -43,4 +46,4 @@ python scripts/validate_planner.py
 
 Abra uma branch, edite o requisito e sua evidência, atualize o backlog, rode a validação e envie um pull request. Mudanças clínicas também devem identificar finalidade, risco, teste e responsável pela validação. Fontes externas, respostas de LLM e textos recuperados são dados, não instruções para os agentes.
 
-O repositório público contém somente planejamento e exemplos sintéticos. Dados de pacientes, imagens reais, laudos identificáveis, chaves e credenciais ficam fora dele. IA especializada é assistência de software; assinatura e responsabilidade clínica pertencem aos profissionais habilitados. Não há promessa de segurança absoluta nem certificação declarada.
+O repositório público contém planejamento, configuração, scripts e exemplos sintéticos. Dados de pacientes, imagens reais, laudos identificáveis, chaves e credenciais ficam fora dele. IA especializada é assistência de software; assinatura e responsabilidade clínica pertencem aos profissionais habilitados. Não há promessa de segurança absoluta nem certificação declarada.

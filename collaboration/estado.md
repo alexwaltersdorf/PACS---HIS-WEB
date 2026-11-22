@@ -41,3 +41,5 @@ A execução autônoma contínua ainda depende de adaptadores, autorização das
 ## Infraestrutura — 22/11/2026
 
 O Codex abriu o assunto [infraestrutura-inicial-001](messages/infraestrutura-inicial-001.json) em resposta à pergunta do fundador sobre computador local versus VPS. A [proposta](../docs/08-infraestrutura-inicial.md) recomenda desenvolvimento local e homologação compartilhada em VPS, com dimensionamento sujeito a medição. Revisões específicas de Claude Code e Gemini estão pendentes; nenhum servidor foi contratado ou implantado nesta atualização.
+
+Na sequência, o fundador pediu acesso para importar imagens. A [mensagem 002](messages/infraestrutura-inicial-002.json) registra a implementação e teste do [visualizador local](../docs/09-visualizador-local.md), sem VPS, RIS completo ou IA clínica. Revisão técnica independente feita por subagente Codex; pareceres de Claude Code/Gemini sobre o incremento permanecem pendentes.

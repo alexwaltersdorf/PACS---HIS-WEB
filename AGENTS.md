@@ -1,6 +1,6 @@
 # Squad PACS/RIS/HIS — instruções do projeto
 
-Leia `PLANNER.md`, `docs/contexto-projeto.md` e o documento do domínio antes de atuar. Este repositório contém planejamento; não declare aplicação, controles, agentes embarcados ou eficácia clínica implementados sem evidência.
+Leia `PLANNER.md`, `docs/contexto-projeto.md` e o documento do domínio antes de atuar. Este repositório contém planejamento e um primeiro ambiente local de importação/visualização, documentado em `docs/09-visualizador-local.md`; não extrapole essa entrega para RIS completo, agentes embarcados ou eficácia clínica sem evidência.
 
 ## Conselho entre Codex, Claude Code e Gemini
 
