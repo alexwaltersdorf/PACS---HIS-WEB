@@ -51,3 +51,5 @@ Backup semanal anunciado pelo provedor não estabelece o RPO do produto. Definir
 - **DESCONHECIDO:** parceiro piloto, volume, concorrência, tamanho/retencão de exames, RPO/RTO, orçamento e desempenho real. Claude Code e Gemini ainda não revisaram esta proposta específica.
 
 Esta atualização registra a escolha candidata e o primeiro incremento. Nenhum serviço do produto foi instalado ou iniciado por esta alteração documental.
+
+Atualização posterior em 22/11/2026: foi disponibilizado o [primeiro visualizador local executável](09-visualizador-local.md), com escopo e testes próprios. A proposta acima permanece como histórico, não como descrição do estado atual de execução.

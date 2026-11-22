@@ -1,0 +1,22 @@
+{
+  "Name": "PACS HIS - Local",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "IndexDirectory": "/var/lib/orthanc/db",
+  "Plugins": [
+    "/usr/share/orthanc/plugins-available/libOrthancDicomWeb.so",
+    "/usr/share/orthanc/plugins-available/libOrthancGdcm.so",
+    "/usr/share/orthanc/plugins-available/libOrthancExplorer2.so",
+    "/usr/share/orthanc/plugins-available/libOrthancOHIF.so"
+  ],
+  "HttpServerEnabled": true,
+  "HttpPort": 8042,
+  "RemoteAccessAllowed": true,
+  "AuthenticationEnabled": true,
+  "DicomServerEnabled": false,
+  "ExecuteLuaEnabled": false,
+  "RestApiWriteToFileSystemEnabled": false,
+  "HttpDescribeErrors": false,
+  "DicomWeb": {"Enable": true, "Root": "/dicom-web/"},
+  "OHIF": {"DataSource": "dicom-web"},
+  "OrthancExplorer2": {"Enable": true, "IsDefaultOrthancUI": true}
+}
