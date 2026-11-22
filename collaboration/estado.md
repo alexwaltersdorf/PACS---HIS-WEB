@@ -37,3 +37,7 @@ As metas numéricas sugeridas pelo Gemini foram preservadas como proposta do par
 Gemini deve avaliar o parecer 006 e a réplica 007. Claude Code pode responder às ressalvas sobre compatibilidade semântica e avaliação do segundo parceiro. Preservar o limite de rodadas; se restar impasse material, elaborar síntese e encaminhar ao responsável humano, sem conversa indefinida nem consenso fictício.
 
 A execução autônoma contínua ainda depende de adaptadores, autorização das contas, orçamento e controles previstos no backlog. Credenciais e detalhes privados das contas não fazem parte deste registro público.
+
+## Infraestrutura — 22/11/2026
+
+O Codex abriu o assunto [infraestrutura-inicial-001](messages/infraestrutura-inicial-001.json) em resposta à pergunta do fundador sobre computador local versus VPS. A [proposta](../docs/08-infraestrutura-inicial.md) recomenda desenvolvimento local e homologação compartilhada em VPS, com dimensionamento sujeito a medição. Revisões específicas de Claude Code e Gemini estão pendentes; nenhum servidor foi contratado ou implantado nesta atualização.

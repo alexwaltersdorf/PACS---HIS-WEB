@@ -20,6 +20,7 @@ Plataforma web integrada para gestão da jornada diagnóstica, armazenamento e v
 | [Segurança e privacidade](docs/05-seguranca.md) | Ameaças, controles, LGPD e validação |
 | [Roadmap e backlog](docs/06-roadmap.md) | Etapas, dependências e critérios de conclusão |
 | [Decisões de arquitetura](docs/07-decisoes.md) | Escolhas adotadas, alternativas e questões abertas |
+| [Infraestrutura inicial](docs/08-infraestrutura-inicial.md) | Desenvolvimento local, VPS de homologação e primeiro incremento proposto |
 | [Contexto compartilhado](docs/contexto-projeto.md) | Premissas confirmadas e informações ainda necessárias |
 | [Fontes](docs/fontes.md) | Referências oficiais e limites da pesquisa |
 

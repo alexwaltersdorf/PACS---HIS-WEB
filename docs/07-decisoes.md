@@ -16,6 +16,7 @@
 | ADR-012 | Perfis portáveis e política declarativa neste commit | Planner sustentável; runtime será implementado em incrementos verificáveis |
 | ADR-013 | Conselho de Codex, Claude Code e Gemini | Governança solicitada pelo fundador; mensagens, crítica cruzada e decisões compartilhadas, sem simular participantes |
 | ADR-014 | Git como meio assíncrono inicial | Protocolo e utilitário local disponíveis; despacho autônomo contínuo depende de adaptadores, permissões e orçamento |
+| ADR-015 | [Desenvolvimento local e VPS para homologação](08-infraestrutura-inicial.md), proposta em 22/11/2026 | Iniciar sem contratação; preparar implantação reproduzível. KVM 4 é candidato para medir carga sintética, sem dimensionamento de produção nem GPU contratada |
 
 ## Decisões necessárias antes da implementação clínica
 
